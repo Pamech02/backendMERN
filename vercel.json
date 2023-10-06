@@ -1,22 +1,14 @@
 {
-    "functions": {
-        "api/index": {
-            "handler": "./src/index.js",
-            "runtime": "@vercel/node"
+    "builds":[
+        {
+            "src":"./index.js",
+            "use":"@vercel/node"
         }
-    },
-    "routes": [
+    ],
+    "routes":[
         {
-            "src": "/api/auth/(.*)",
-            "dest": "/api/index"
-        },
-        {
-            "src": "/api/events/(.*)",
-            "dest": "/api/index"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/src/index.js"
+            "src":"/(.*)",
+            "dest":"/"
         }
     ]
 }
