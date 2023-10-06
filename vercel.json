@@ -1,22 +1,15 @@
 {
-    "functions": {
-      "api/index": {
-        "runtime": "@vercel/node@1.0.0"
+    "version": 2,
+    "builds": [
+      {
+        "src": "./index.js",
+        "use": "@vercel/node"
       }
-    },
-    "routes": [
+    ],
+    "rewrites": [
       {
-        "src": "/api/auth/(.*)",
-        "dest": "/api/index"
-      },
-      {
-        "src": "/api/events/(.*)",
-        "dest": "/api/index"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/src/index.js"
+        "source": "/(.*)",
+        "destination": "/"
       }
     ]
   }
-  
