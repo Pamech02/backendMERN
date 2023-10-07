@@ -5,7 +5,7 @@ const isDate = (value)=>{
         return false
     }
     //pude dar erro al momento de conectar con el front moment(value)
-    const date = moment(value, "MM-DD-YYYY");
+    const date = moment(value, "DD-MM-YYYY");
     if(date.isValid()){
         return true
     }else{
